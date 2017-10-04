@@ -1,24 +1,16 @@
 (function () {
 
-  let word = "racecar"
+  
+  function palindrome(word){
 
-
-  let arrayWord = word.split("")
-  let reversedArrayWord = arrayWord.reverse()
-  let reversedWord = reversedArrayWord.join("")
-
-  if (word == reversedWord) {
-
-    console.log("True")
-
-  }
-  else {
-    console.log("False");
+      let arrayWord = word.split("")
+      let reversedArrayWord = arrayWord.reverse()
+      let reversedWord = reversedArrayWord.join("")
+    
+      return (word == reversedWord)
+  
   }
 
-
-  // console.log(word);
-  // console.log(reversedArrayWord);
-  // console.log(reversedWord);
+  module.exports = palindrome;
 
 })()

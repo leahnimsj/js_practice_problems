@@ -1,22 +1,31 @@
 (function() {
 
-  let word = "cheese";
-  let letter = "s";
+  // let word = "cheese";
+  // let letter = "s";
 
-  let wordArray = word.split(letter).length;
+  // let wordArray = word.split(letter).length;
 
-  let result = wordArray - 1;
+  // let result = wordArray - 1;
 
-  if (result>0) {
-    var text = "Yeah, the letter " + letter + " exists " +result +" time(s) in my word"
-  } else {
-      var text = "Nope, that letter doesn't exist in my word."
+  hangman("cheese", "s");
 
-  }
 
-  // console.log(wordArray);
-  // console.log(result);
-  // console.log(yes);
-  console.log(text);
+  function hangman(searchWord, letterGuess){
+    
+    let wordArray = searchWord.split(letterGuess).length;
+
+    let result = wordArray - 1;
+    
+    // console.log(result);
+    if (result>0) {
+      return "Yes the letter " + letterGuess + " exists " + result + " time(s) in my word"
+    } 
+    
+      return "Nope, the letter " + letterGuess + " does not exist in my word."
+  
+    }
+
+    module.exports = hangman;
+
 
 })()

@@ -6,15 +6,17 @@
       return b - a;
     })
 
-    return mountainArray
+    return mountainArray[0];
 
   }
 
-  let tallestMountain = findTallestMountain([400, 200, 100, 800, 500])[0]
+  module.exports = findTallestMountain;
 
-  console.log(tallestMountain)
+  // console.log(tallestMountain)
 
 })()
+
+
 
   // below is my oringial work - above is turning it into a function
 
